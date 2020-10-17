@@ -1,0 +1,7 @@
+{{ if eq . "Music_live_def" }}
+    <source srcset="/thumbnail-default/Music-live-def.webp" alt="サムネイル" type="image/webp">
+    <img src="/thumbnail-default/Music-live-def.jpg" alt="サムネイル">  
+{{ else }}
+    <source srcset="{{ . }}.webp" alt="サムネイル" type="image/webp">
+    <img src="{{ . }}.png" alt="サムネイル">
+{{ end }}

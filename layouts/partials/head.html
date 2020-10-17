@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" {{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/style.css">
+{{ if eq .IsHome false }}
+<link rel="stylesheet" href="/css/single.css">
+<link rel="stylesheet" href="/css/shortcode.css">
+{{ end }}
+<!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+</head>
+<body>

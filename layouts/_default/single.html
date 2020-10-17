@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  {{ partial "head" . }}
+<body>
+  {{ partial "header" . }}
+  <main>
+      <section id="thumbnail">
+          <div id="thumbnail_wrap">
+            <picture id="thumbnail_image">
+              {{ partial "thumbnail" .Params.thumbnail_url }}         
+            </picture>
+            <div id="thumbnail_data">
+                <p id="thumbnail_data_genre" class="title">with {{ .Params.genre }}</p>
+                <h1>{{ .Title }}</h1>
+                <p id="thumbnail_data_meta">
+                    <span id="news_clock_icon">投稿日:{{ .Date.Format "2006/1/2" }}</span>
+                    <span id="news_writer_icon">{{ .Params.writer }}</span>
+                </p>
+                <p id="tags" class="icon icon-tags">
+                  {{ if .Params.tags }}
+                    {{ partial "tags_link" .Params.tags }}
+                  {{ end }}
+                </p>
+                <p id="thumbnail_data_genre2">With {{ .Params.genre }}</p>
+            </div>
+          </div>
+      </section>
+      <section id="blog_main">
+        {{ .Content }}
+        {{ if .Site.Params.Info.related }}
+        <div class="related">{{ partial "related" . }}</div>
+        {{ end }}
+      </section>
+        {{ partial "writer" .Params.writer }}
+    </div>
+  </main>
+    {{ partial "footer" . }}
+</body>
+</html>

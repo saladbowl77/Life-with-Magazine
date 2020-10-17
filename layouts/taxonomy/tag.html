@@ -1,0 +1,64 @@
+{{ partial "head" . }}
+{{ partial "header" . }}
+<main class="section">
+  <section>
+    <h2 id="tagshow"></h2>
+    <div id="news_list">
+      {{ $paginator := .Paginate (where .Data.Pages "Params.hidden" "ne" true) }}
+      {{ range sort .Paginator.Pages }}
+        <a href="{{.RelPermalink}}" class="news_list_wrap">
+            <picture class="news_list_thumbnail">
+              {{ partial "thumbnail" .Params.thumbnail_url }}      
+            </picture>
+            <div class="news_list_data_wrap">
+                <h3>{{.Title}}</h3>
+                <p class="newest_10_data">
+                    with {{ .Params.genre }} | {{.Date.Format "2006/01/02"}}
+                </p>
+            </div>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+</main>
+<style>
+  main h2#tagshow {
+    border-bottom: none;
+  }
+  a.news_list_wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 5px 0;
+    border-bottom: dotted 2.5px #dedede;
+  }
+  a.news_list_wrap:last-child {
+    border-bottom: none;
+  }
+  a.news_list_wrap picture.news_list_thumbnail {
+    width: 40%;
+    margin: 20px;
+  }
+  a.news_list_wrap picture.news_list_thumbnail source,
+  a.news_list_wrap picture.news_list_thumbnail img {
+    width: 100%;
+  }
+  a.news_list_wrap div.news_list_data_wrap {
+    margin: 20px 0px;
+  }
+  a.news_list_wrap picture.news_list_thumbnail h3 {
+    font-size: 1.5rem;
+  }
+</style>
+{{ partial "footer" . }}
+<script type="text/javascript">
+  var getUrl = location.pathname;
+  console.log(getUrl);
+  getUrl = decodeURI(getUrl);
+  console.log(getUrl);
+  var tag = getUrl.substr( 6 );
+  tag = tag.slice( 0, -1 );
+  console.log(tag);
+  const tag_show = document.getElementById("tagshow");
+  tagshow.innerHTML = tag + "のついている記事一覧";
+  console.log("aaaaaaaaa");
+</script>

@@ -1,0 +1,5 @@
+baseURL = "/"
+languageCode = "ja-jp"
+title = "Life with Magazine"
+
+pygmentsCodeFences = true

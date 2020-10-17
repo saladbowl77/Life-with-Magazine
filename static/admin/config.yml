@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: saladbowl77/Life-with-Magazine.github.io
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - label: "News"
+    name: "news"
+    folder: "content/"
+    path: "{{year}}/{{month}}/{{slug}}"
+    preview_path: "/{{year}}/{{month}}/{{slug}}"
+    create: true
+    slug: '{{fields.slug}}'
+    fields:
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "url名", name: "slug", widget: "string", default: "default-slug"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "公開非公開", name: "draft", widget: "select", options: ["false", "true"], default: "false"}
+      - {label: "あらすじ", name: "description", widget: "string"}
+      - {label: "ジャンル", name: "genre", widget: "select", options: ["Music", "Books", "Technology"]}
+      - {label: "サムネイル", name: "thumbnail_url", widget: "image"}
+      - {label: "サムネイル", name: "thumbnail_url", widget: "select", options: ["", "Music_live_def"]}
+      - {label: "ジャンル", name: "genre", widget: "select", options: ["Music", "Books", "Technology"]}
+      - {label: "ライター", name: "writer", widget: "select", options: ["saladbowl", "miku28820761", "T_Mizuoka"]}
+      - {label: "タグ", name: "tags", widget: "list"}
+      - {label: "TwitterCard", name: "card", widget: "select", options: ["summary", "summary_large_image"], default: "summary"}
+      - {label: "本文", name: "body", widget: "markdown"}

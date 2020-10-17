@@ -1,0 +1,9 @@
+{{ range first 1 . }}
+<a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="new_news_data_tag">{{ . }}</a>
+{{ end }}
+
+{{ if gt (len .) 1 }}
+  {{ range after 1 . }}
+  | <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="new_news_data_tag">{{ . }}</a>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  {{ partial "head" . }}
+<body>
+  {{ partial "header" . }}
+    <main id="top">
+      <section id="newsWrap">
+        <section id="new_news">
+          {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Type" "2020") }}
+            <a href="{{.RelPermalink}}" id="new_news_wrap">
+              <picture id="new_news_thumbnail">
+                {{ partial "thumbnail" .Params.thumbnail_url }}         
+              </picture>
+              <div id="new_news_data">
+                  <p id="new_news_data_genre" class="title">with {{ .Params.genre }}</p>
+                  <h2>{{.Title}}</h2>
+                  <p id="new_news_data_genre_tags">
+                    {{ if .Params.tags }}
+                      {{ partial "tags" .Params.tags }}
+                    {{ end }}
+                  </p>
+                  <p id="new_news_data_meta">
+                      <span id="new_news_data_date">{{.Date.Format "2006/01/02"}}</span>
+                      <span id="with_news_writer">{{ .Params.writer }}</span>
+                  </p>
+                  <p id="new_news_data_genre2">With {{ .Params.genre }}</p>
+              </div>
+          </a>
+          {{ end }}
+        </section>
+        <section class="with_news" id="with_music">
+          <h2 class="title">with Music Topics</h2>
+          <div class="with_news_all_wrap">
+            {{ range first 2 (where .Site.RegularPages.ByDate.Reverse "Params.genre" "Music") }}
+              <a href="{{.RelPermalink}}" class="with_news_wrap">
+                <picture class="with_news_thumbnail">
+                  {{ partial "thumbnail" .Params.thumbnail_url }}     
+                </picture>
+                <div class="with_news_data">
+                    <h3 class="with_news_title">{{.Title}}</h3>
+                    <p class="with_news_data_genre_tags">
+                      {{ if .Params.tags }}
+                        {{ partial "tags" .Params.tags }}
+                      {{ end }}
+                    </p>
+                    <p>
+                      <span class="with_news_data_date">{{.Date.Format "2006/01/02"}}</span>|
+                      <span class="with_news_writer">{{ .Params.writer }}</span>
+                    </p>
+                </div>
+              </a>
+            {{ end }}
+          </div>
+          <a href="/music">全て見る</a>
+        </section>
+        <section class="with_news" id="with_technology">
+          <h2 class="title">with technology Topics</h2>
+          <div class="with_news_all_wrap">
+            {{ range first 2 (where .Site.RegularPages.ByDate.Reverse "Params.genre" "Technology") }}
+              <a href="{{.RelPermalink}}" class="with_news_wrap">
+                <picture class="with_news_thumbnail">
+                  {{ partial "thumbnail" .Params.thumbnail_url }}     
+                </picture>
+                <div class="with_news_data">
+                    <h3 class="with_news_title">{{.Title}}</h3>
+                    <p class="with_news_data_genre_tags">
+                      {{ if .Params.tags }}
+                        {{ partial "tags" .Params.tags }}
+                      {{ end }}
+                    </p>
+                    <p>
+                      <span class="with_news_data_date">{{.Date.Format "2006/01/02"}}</span>|
+                      <span class="with_news_writer">{{ .Params.writer }}</span>
+                    </p>
+                </div>
+              </a>
+            {{ end }}
+          </div>
+          <a href="/technology">全て見る</a>
+      </section>
+    </section>
+    <section id="sidemenu">
+      <section id="s_links">
+          <h2 class="title">Genre</h2>
+          <a class="title" href="/music">with Music</a>
+          <a class="title" href="/technology">with Technology</a>
+          <a class="title" href="/technology">with Books</a>
+          <p>coming soon</p>
+      </section>
+      <section id="newest_10">
+          <h2 class="title">10 NEW Topic</h2>
+          {{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Type" "2020") }}
+            <a href="{{.RelPermalink}}" class="newest_wrap">
+                <picture class="with_news_thumbnail">
+                  {{ partial "thumbnail" .Params.thumbnail_url }}      
+                </picture>
+                <div class="with_news_data_wrap">
+                    <h4>{{.Title}}</h4>
+                    <p class="newest_10_data">
+                        with {{ .Params.genre }} | {{.Date.Format "2006/01/02"}}
+                    </p>
+                </div>
+            </a>
+          {{end}}
+      </section>
+    </section>
+    </main>
+    {{ partial "footer" . }}
+</body>
+</html>

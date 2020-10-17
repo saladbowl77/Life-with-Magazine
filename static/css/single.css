@@ -1,0 +1,159 @@
+main {
+    width: 90%; max-width: 800px; min-height: calc(100% - 130px - 70px);
+    margin: 20px auto 50px auto;
+}
+main h1 {
+    font-size: 1.6rem;
+}
+main a {color: #4581bd;}
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  margin: 10px 0 5px 0;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative;
+}
+main h2 {font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black;
+}
+main h3 {font-size: 18px;}
+main p, 
+main blockquote, 
+main ul, 
+main ol,
+main dl,
+main li,
+main table,
+main pre {
+  margin: 15px 0; 
+}
+main p {font-size: 1rem;}
+main p span {font-size: 0.9rem;}
+main li {margin-left: 20px;}
+main #news_writer_icon::before {
+    display: inline-block; content: ''; vertical-align: middle; margin: 0 1px 4px 0;
+    width: 1rem; height: 1rem;
+    background-image: url(/icon/writer.png); background-repeat: no-repeat; background-size: contain;
+}
+main #news_clock_icon::before {
+    display: inline-block; content: ''; vertical-align: middle; margin: 0 1px 4px 0;
+    width: 1rem; height: 1rem;
+    background-image: url(/icon/clock.png); background-repeat: no-repeat; background-size: contain;
+}
+
+main section#thumbnail {
+  position: relative;
+  width: 100%; height: 100%;
+  margin-bottom: 50px;
+}
+main section#thumbnail p {
+  margin: 7px;
+}
+main section#thumbnail div#thumbnail_wrap {
+  width: 100%; height: 100%;
+}
+main section#thumbnail div#thumbnail_wrap #thumbnail_image source,
+main section#thumbnail div#thumbnail_wrap #thumbnail_image img {
+  width: 90%;
+}
+main section#thumbnail p#thumbnail_data_genre {
+  position: absolute;
+  top: -3.5px; left: 9px;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+main section#thumbnail p#thumbnail_data_genre2 {
+  position: absolute;
+  bottom: -2.4rem; right: -0.8rem;
+  font-size: 3rem;
+  color: rgba(182, 182, 182, 0.7);
+  z-index: 2;
+}
+main section#thumbnail picture#thumbnail_thumbnail source,
+main section#thumbnail picture#thumbnail_thumbnail img {
+  width: 100%;
+}
+main section a {
+  color: #020202;
+  text-decoration: none;
+}
+main section#thumbnail div#thumbnail_wrap div#thumbnail_data {
+  min-height: 150px;
+  clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%);
+  position: absolute;
+  width: 70%;
+  padding: 1.5rem 2px 5px 20px;
+  bottom: -20px; right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+main section#thumbnail div#thumbnail_wrap div#thumbnail_data h2 {
+  font-size: 1.4rem;
+}
+
+#writer {width: 100%; min-height: 150px;}
+#writer_wrap {display: flex;}
+#writer_icon {max-width: 100px; max-height: 100px;}
+#writer_icon img,
+#writer_icon source {width: 100px; border-radius: 50%;}
+#writer_data p {margin: 0; padding: 0;}
+#writer_name {font-size: 1.2rem; font-weight: 700;}
+@media screen and (max-width: 500px) {
+  main #news_writer_icon::before {
+    display: inline-block; content: ''; vertical-align: middle; margin: 0 1px 4px 0;
+    width: 0.8rem; height: 0.8rem;
+    background-image: url(/icon/writer.png); background-repeat: no-repeat; background-size: contain;
+  }
+  main #news_clock_icon::before {
+      display: inline-block; content: ''; vertical-align: middle; margin: 0 1px 4px 0;
+      width: 0.8rem; height: 0.8rem;
+      background-image: url(/icon/clock.png); background-repeat: no-repeat; background-size: contain;
+  }
+  main section#thumbnail div#thumbnail_wrap div#thumbnail_data {
+    padding: 12px 2px 5px 20px;
+    min-height: 50px;
+    width: 90%;
+  }
+  main section#thumbnail p#thumbnail_data_genre {
+    position: absolute;
+    top: -3px; left: 9px;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  main section#thumbnail p#thumbnail_data_genre2 {
+    display: none;
+  }
+  main section#thumbnail div#thumbnail_wrap div#thumbnail_data p#thumbnail_data_genre2 {
+      position: absolute;
+      bottom: -1rem; right: -0.6rem;
+      font-size: 1rem;
+  }
+  main section#thumbnail div#thumbnail_wrap div#thumbnail_data h1 {
+      font-size: 1.4rem;
+      margin: 2px 0;
+  }
+  main section#thumbnail div#thumbnail_wrap div#thumbnail_data p#thumbnail_data_meta,
+  main section#thumbnail div#thumbnail_wrap div#thumbnail_data p#tags {
+      font-size: 0.8rem;
+  }
+
+
+  main section#thumbnail picture#thumbnail_thumbnail source,
+  main section#thumbnail picture#thumbnail_thumbnail img {
+    width: 100%;
+  }
+
+  #writer_wrap {display: block;}
+  #writer_icon img,
+  #writer_icon source {margin: 0 auto; display: block;}
+  #writer_wrap #writer_data p#writer_name {font-size: 1rem;}
+  #writer_wrap #writer_data p#writer_about,
+  #writer_wrap #writer_data p#writer_twiter {font-size: 0.8rem;}
+}
