@@ -23,7 +23,6 @@ collections:
       - {label: "あらすじ", name: "description", widget: "string"}
       - {label: "ジャンル", name: "genre", widget: "select", options: ["Music", "Books", "Technology"]}
       - {label: "サムネイル", name: "thumbnail_url", widget: "image"}
-      - {label: "サムネイル", name: "thumbnail_url", widget: "select", options: ["", "Music_live_def"]}
       - {label: "ジャンル", name: "genre", widget: "select", options: ["Music", "Books", "Technology"]}
       - {label: "ライター", name: "writer", widget: "select", options: ["saladbowl", "miku28820761", "T_Mizuoka"]}
       - {label: "タグ", name: "tags", widget: "list"}
