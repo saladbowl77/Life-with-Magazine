@@ -28,3 +28,17 @@ collections:
       - {label: "タグ", name: "tags", widget: "list"}
       - {label: "TwitterCard", name: "card", widget: "select", options: ["summary", "summary_large_image"], default: "summary"}
       - {label: "本文", name: "body", widget: "markdown"}
+  - label: "INFO"
+    name: "info"
+    folder: "content/info/"
+    path: "/"
+    preview_path: "/{{slug}}"
+    create: true
+    slug: '{{fields.slug}}'
+    fields:
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "url名", name: "slug", widget: "string", default: "default-slug"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "公開非公開", name: "draft", widget: "select", options: ["false", "true"], default: "false"}
+      - {label: "説明", name: "description", widget: "string"}
+      - {label: "本文", name: "body", widget: "markdown"}

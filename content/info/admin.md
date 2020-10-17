@@ -1,7 +1,7 @@
 ---
 title: Life with Magazine 運営者について
 slug: admin
-date: 2020-10-24T00:00:00+09:00
+date: 2020-10-10T00:00:00+09:00
 draft: false
 description: Life with Magazineの運営者についてのページ
 ---
@@ -55,7 +55,7 @@ description: Life with Magazineの運営者についてのページ
 - ねむるまち / yama くじら
 - Heaven and Hell / DUSTCELL(人によっては嫌いかもしれませんがこういう曲好きです
 )
-- 心做し / majiko(感情移入してしまいます)
+- 心做し / majiko(カバーですがmajikoさんの声と合わさり感情移入してしまいます)
 - 秒針を噛む / ずっと真夜中でいいのに
 - 猫じゃらし / RADWIMPS
 - 僕のこと / Mrs. GREEN APPLE

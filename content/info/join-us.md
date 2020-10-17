@@ -1,7 +1,7 @@
 ---
 title: Life with Magazine ライター募集
 slug: join-us
-date: 2020-10-24T00:00:00+09:00
+date: 2020-10-10T00:00:00+09:00
 draft: false
 description: Life with Magazineのライター募集ページ
 ---

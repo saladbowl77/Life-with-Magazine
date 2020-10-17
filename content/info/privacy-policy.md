@@ -1,7 +1,7 @@
 ---
 title: Life with Magazine 個人情報保護方針
 slug: privacy-policy
-date: 2020-10-24T00:00:00+09:00
+date: 2020-10-10T00:00:00+09:00
 draft: false
 description: Life with Magazineのプライバシーポリシー
 ---

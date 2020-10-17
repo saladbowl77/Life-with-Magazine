@@ -1,7 +1,7 @@
 ---
 title: Life with Magazine 利用規約
 slug: terms-of-service
-date: 2020-10-24T00:00:00+09:00
+date: 2020-10-10T00:00:00+09:00
 draft: false
 description: Life with Magazineの利用規約
 ---
